@@ -16,3 +16,11 @@ export interface IProductError { // interface que gestiona errores en la creaciÃ
   export interface CreateFormProps { // interface para la funciÃ³n que crea un nuevo producto.
     onAddProduct: (product: IProduct) => void;
   }
+
+  export interface TableData {
+    data : IProduct[]
+  }
+
+  export interface TableRowProducts {
+    product : IProduct
+  }

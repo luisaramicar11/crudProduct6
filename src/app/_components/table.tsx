@@ -1,7 +1,8 @@
+"use client";
 import styled from "styled-components"
 //Importo el componente que va a renderizar las filas de table row
-import { TableData } from "../types/InterfaceProduct";
 import TableRow from "./TableRow";
+import { TableData } from "../types/interfaceProduct";
 //Se importa la interfaz para definir los tipos de props que recibe el componente table
 
 

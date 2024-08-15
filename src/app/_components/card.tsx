@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import styled from "styled-components";
-import { IProduct } from "../interface/interfaceProduct";
+import { IProduct } from "../types/interfaceProduct";
+
 
 const Card_container = styled.div`
 border: 1px solid #e0e0e0;

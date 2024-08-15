@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import React from "react";
-import { IProduct } from "../interface/interfaceProduct";
-import Card from "../components/card";
-import { getProducts } from "../components/GetProducts";  
+import Card from "../_components/card";
+import { getProducts } from "../_components/GetProducts";  
+import { IProduct } from "../types/interfaceProduct";
 
 
 const ProductsPage: React.FC = () => {

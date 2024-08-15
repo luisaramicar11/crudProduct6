@@ -3,12 +3,12 @@ import {useState} from "react"
 import { setProduct } from "./SetProducts";
 import Loader from "./Loader";
 import styled from "styled-components";
-import { IProduct } from "../types/InterfaceProduct";
-import { CreateFormProps, IProductError } from "../interface/interfaceProduct";
+import { CreateFormProps, IProduct, IProductError } from "../types/interfaceProduct";
 import Message from "./Message";
 
+
 const Div = styled.div`
-  margin: 15px;
+    margin: 15px;
     display: flex;
     justify-content: center;
   `

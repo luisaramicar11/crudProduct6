@@ -1,7 +1,6 @@
-import { IProduct } from "../types/InterfaceProduct";
-
+import { IProduct } from "../types/interfaceProduct";
 
 export function getProducts(): IProduct[] { // función para obtener los productos almacenados en el localStorage.
-    const products = localStorage.getItem('products');
+    const products : string | null = localStorage.getItem('products');
     return products ? JSON.parse(products) : [];
 }

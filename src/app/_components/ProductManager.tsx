@@ -1,9 +1,9 @@
-'use client';
 import { useEffect, useState } from "react";
 import { getProducts } from "./GetProducts";
 import CreateForm from "./CreateForm";
-import Table from "./Table";
-import { IProduct } from "../types/InterfaceProduct";
+import Table from "./table";
+import { IProduct } from "../types/interfaceProduct";
+
 
 const ProductManager = () => {
   const [products, setProducts] = useState<IProduct[]>([]);

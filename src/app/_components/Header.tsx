@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styled from 'styled-components';
 
 
@@ -53,13 +53,13 @@ const Ul = styled.ul`
   align-items: center;
   padding: 30px;
 `
-const HeaderComponent: React.FC = () => (
+export const HeaderComponent: React.FC = () => (
   <Header>
         <Nav>
           
           <Ul>
             <Logo> TechNova Store</Logo>
-            <Li><Enlace href="/home">Home</Enlace></Li>
+            <Li><Enlace href="/">Home</Enlace></Li>
            
             <Li><Enlace href="/products">Productos</Enlace></Li>
           
@@ -70,4 +70,4 @@ const HeaderComponent: React.FC = () => (
       </Header>
 );
 
-export default HeaderComponent;
+
