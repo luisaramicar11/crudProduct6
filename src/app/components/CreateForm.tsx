@@ -4,6 +4,59 @@ import Message from "./Message";
 import { CreateFormProps, IProduct, IProductError } from "../types/interfaceProduct";
 import { setProduct } from "./SetProducts";
 import Loader from "./Loader";
+import styled from "styled-components";
+
+
+const Div = styled.div`
+  margin: 15px;
+    display: flex;
+    justify-content: center;
+  `
+const Form = styled.form`
+    padding: 15px;
+    border-radius: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.2);;
+  `
+
+
+const Title = styled.h2`
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: bold;
+  font-size: 15pt`
+ 
+
+
+const Inputs = styled.input`
+    border-radius: 10px;
+    border: 0.9px black solid;
+    padding: 5px;
+    font-size: small;
+    color: black
+    `
+
+const DivButton = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+const Button = styled.button`
+    width: 10%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px black solid;
+    cursor: pointer;
+    background: none;
+    padding: 3px;
+    color: black;
+`
 
 
 
@@ -15,7 +68,7 @@ const initialForm: IProduct = {
     image: "",
   };
 
-  const ContactForm: React.FC<CreateFormProps> = ({ onAddProduct }) => {
+  const CreateForm: React.FC<CreateFormProps> = ({ onAddProduct }) => {
     const [form, setForm] = useState<IProduct>(initialForm);
     const [errors, setErrors] = useState<IProductError>({} as IProductError);
     const [loading, setLoading] = useState(false);  
@@ -83,10 +136,12 @@ const initialForm: IProduct = {
 
 
   return (
-    <div>
-      <h2>Contact Form</h2>
-      <form onSubmit={handleSubmit}>
-        <input
+    <main>
+
+        <Title>Create Form</Title>
+    <Div>
+      <Form onSubmit={handleSubmit}>
+        <Inputs
           type="text"
           name="title"
           placeholder="Escribe el nombre del producto"
@@ -96,7 +151,7 @@ const initialForm: IProduct = {
           required
         />
         {errors.title && <p style={styles}>{errors.title}</p>}
-        <input
+        <Inputs
           type="text"
           name="description"
           placeholder="Escribe la descripción del producto"
@@ -106,7 +161,7 @@ const initialForm: IProduct = {
           required
         />
         {errors.description && <p style={styles}>{errors.description}</p>}
-        <input
+        <Inputs
           type="number"
           name="price"
           placeholder="Escribe el precio del producto"
@@ -116,7 +171,7 @@ const initialForm: IProduct = {
           required
         />
         {errors.price && <p style={styles}>{errors.price}</p>}
-        <input
+        <Inputs
           type="text"
           name="image"
           placeholder="Carga la URL del producto"
@@ -126,12 +181,18 @@ const initialForm: IProduct = {
           required
         />
         {errors.image && <p style={styles}>{errors.image}</p>}
-        <button type="submit">Enviar</button>
-      </form>
+        <DivButton>
+            <Button type="submit">Enviar</Button>
+        </DivButton>
+      </Form>
       {loading && <Loader/>}
       {success && <Message msg="Los datos han sido enviados" bgColor="#198754" />}
-    </div>
+    </Div>
+    </main>
   );
 };
 
-export default ContactForm;
+export default CreateForm;
+
+
+
