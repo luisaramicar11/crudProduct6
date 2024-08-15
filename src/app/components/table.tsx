@@ -1,6 +1,8 @@
 import styled from "styled-components"
-import TableRow from "./TableRow";//Importo el componente que va a renderizar las filas de table row
-import {TableData} from "../types/InterfaceProduct"//Se importa la interfaz para definir los tipos de props que recibe el componente table
+//Importo el componente que va a renderizar las filas de table row
+import { TableData } from "../types/InterfaceProduct";
+import TableRow from "./TableRow";
+//Se importa la interfaz para definir los tipos de props que recibe el componente table
 
 
 const TableContainer = styled.div`
