@@ -1,25 +1,16 @@
-import { MessageProps } from "../types/interfaceMessage"; 
+import styled from "styled-components";
+import {MessageProps} from "../types/InterfaceMessage";
 import React from "react";
 
-// Define un componente funcional de React llamado 'Message' que acepta 'MessageProps' como propiedades.
-const Message: React.FC<MessageProps> = ({ msg, bgColor }) => { 
-    // Dentro del componente, se crea un objeto 'styles' para definir los estilos en línea.
-    const styles: React.CSSProperties = {
-      padding: "1rem",
-      marginBottom: "1rem", 
-      textAlign: "center",
-      color: "#fff", 
-      backgroundColor: bgColor,
-      fontWeight: "bold",
-    };
+const Message: React.FC<MessageProps> = ({ msg, bgColor }) => {
+  const Box = styled.div<{ bgColor: string }>`//Función que me permite accerder a los props y asignar el bgcolor, 
+    padding: 1rem; //a su vez defino el tipo de bgcolor, que recibe el componente 
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: ${(props) => props.bgColor};//Función que accede a los props del componente
+    font-weight: bold;
+  `;
 
-    // Retorna un div con los estilos en línea aplicados y el contenido del mensaje dentro de un párrafo.
-    return (
-      <div style={styles}> 
-        <p>{msg}</p> {}
-      </div>
-    );
+  return <Box bgColor={bgColor}>{msg}</Box>;
 };
-
-// Exporta el componente 'Message' para que pueda ser utilizado en otros archivos.
-export default Message;
