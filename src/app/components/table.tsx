@@ -50,7 +50,7 @@ const StyledTr = styled.tr`
 `;
 
 
-const table: React.FC<TableData> = ({ data}) => {//Define el componente `table` como un componente funcional de React con el tipo `TableData`
+const Table: React.FC<TableData> = ({ data}) => {//Define el componente `table` como un componente funcional de React con el tipo `TableData`
     return (
         <div>
             <h3>Tabla de produtos</h3>
@@ -84,4 +84,4 @@ const table: React.FC<TableData> = ({ data}) => {//Define el componente `table` 
     )
 };
 
-export default table;
+export default Table;

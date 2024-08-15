@@ -1,11 +1,11 @@
 'use client';
 import {useState} from "react"
-import Message from "./Message";
-import { CreateFormProps, IProduct, IProductError } from "../types/interfaceProduct";
 import { setProduct } from "./SetProducts";
 import Loader from "./Loader";
 import styled from "styled-components";
-
+import { IProduct } from "../types/InterfaceProduct";
+import { CreateFormProps, IProductError } from "../interface/interfaceProduct";
+import Message from "./Message";
 
 const Div = styled.div`
   margin: 15px;

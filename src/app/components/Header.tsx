@@ -59,11 +59,11 @@ const HeaderComponent: React.FC = () => (
           
           <Ul>
             <Logo> TechNova Store</Logo>
-            <Li><Enlace href="/">Home</Enlace></Li>
+            <Li><Enlace href="/home">Home</Enlace></Li>
            
             <Li><Enlace href="/products">Productos</Enlace></Li>
           
-            <Li><Enlace href="/createProduct">Crear producto</Enlace></Li>
+            <Li><Enlace href="/create">Crear producto</Enlace></Li>
            
           </Ul>
         </Nav>

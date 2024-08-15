@@ -14,3 +14,5 @@ const Message: React.FC<MessageProps> = ({ msg, bgColor }) => {
 
   return <Box bgColor={bgColor}>{msg}</Box>;
 };
+
+export default Message;
