@@ -1,5 +1,52 @@
+import styled from "styled-components"
 import TableRow from "./TableRow";//Importo el componente que va a renderizar las filas de table row
 import {TableData} from "../types/InterfaceProduct"//Se importa la interfaz para definir los tipos de props que recibe el componente table
+
+
+const TableContainer = styled.div`
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+`;
+
+
+const Title = styled.h3`
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+
+
+const StyledTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+`;
+
+
+const StyledTh = styled.th`
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+`;
+
+const StyledTd = styled.td`
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+`;
+
+const StyledTr = styled.tr`
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
 
 const table: React.FC<TableData> = ({ data}) => {//Define el componente `table` como un componente funcional de React con el tipo `TableData`
     return (
