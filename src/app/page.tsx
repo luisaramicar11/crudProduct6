@@ -1,5 +1,9 @@
 
-function MyApp(){
-  return <div></div>
+export default function Home() {
+  return (
+    <main>
+     
+    </main>
+  );
+
 }
-export default MyApp;
