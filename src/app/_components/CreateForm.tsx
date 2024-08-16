@@ -12,6 +12,7 @@ const Div = styled.div`
     display: flex;
     justify-content: center;
   `
+
 const Form = styled.form`
     padding: 15px;
     border-radius: 20px;
@@ -22,7 +23,6 @@ const Form = styled.form`
     box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.2);;
   `
 
-
 const Title = styled.h2`
   text-align: center;
   margin-bottom: 20px;
@@ -30,7 +30,6 @@ const Title = styled.h2`
   font-weight: bold;
   font-size: 15pt`
  
-
 
 const Inputs = styled.input`
     border-radius: 10px;
@@ -57,8 +56,6 @@ const Button = styled.button`
     padding: 3px;
     color: black;
 `
-
-
 
 const initialForm: IProduct = {
     id: 0,    

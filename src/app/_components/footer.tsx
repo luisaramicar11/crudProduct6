@@ -26,7 +26,7 @@ text-decoration: none;
     text-decoration: underline;
   }
 `;
-export const Footer =()=>{
+const Footer =()=>{
     return(
         <FooterContainer>
         <FooterLinks>
@@ -40,3 +40,5 @@ export const Footer =()=>{
     </FooterContainer>
     )
 }
+
+export default Footer

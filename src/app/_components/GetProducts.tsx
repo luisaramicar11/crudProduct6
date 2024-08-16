@@ -1,3 +1,4 @@
+'use client';
 import { IProduct } from "../types/interfaceProduct";
 
 export function getProducts(): IProduct[] { // función para obtener los productos almacenados en el localStorage.

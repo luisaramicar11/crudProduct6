@@ -53,18 +53,16 @@ const StyledTr = styled.tr`
 
 const Table: React.FC<TableData> = ({ data}) => {//Define el componente `table` como un componente funcional de React con el tipo `TableData`
     return (
-        <div>
-            <h3>Tabla de produtos</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Imagen</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
+        <TableContainer>
+            <Title>Tabla de produtos</Title>
+            <StyledTable>
+                  <StyledTr>
+                      <StyledTh>Nombre</StyledTh>
+                      <StyledTh>Descripción</StyledTh>
+                      <StyledTh>Precio</StyledTh>
+                      <StyledTh>Imagen</StyledTh>
+                      <StyledTh>Acciones</StyledTh>
+                  </StyledTr>
 
                 <tbody>
                     {data.length > 0 ? (//Se realiza un condicional para verificar si hay datos en el array de data.
@@ -76,12 +74,12 @@ const Table: React.FC<TableData> = ({ data}) => {//Define el componente `table` 
                         ))
                     ) : (
                         <tr>
-                            <td colSpan={5}>Sin datos</td>
+                            <StyledTd colSpan={5}>Sin datos</StyledTd>
                         </tr>
                     )}
                 </tbody>
-            </table>
-        </div>
+            </StyledTable>
+        </TableContainer>
     )
 };
 

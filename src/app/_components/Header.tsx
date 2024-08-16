@@ -7,7 +7,6 @@ const Header = styled.header`
   background-color: #a0d6f390; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100px;
-  position: fixed;
   width: 100%;
 `;
 const Nav = styled.nav`
@@ -53,7 +52,7 @@ const Ul = styled.ul`
   align-items: center;
   padding: 30px;
 `
-export const HeaderComponent: React.FC = () => (
+const HeaderComponent: React.FC = () => (
   <Header>
         <Nav>
           
@@ -70,4 +69,4 @@ export const HeaderComponent: React.FC = () => (
       </Header>
 );
 
-
+export default HeaderComponent;

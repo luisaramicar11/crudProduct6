@@ -1,15 +1,15 @@
 "use client"
 import styled from "styled-components";
-import { TableRowProducts } from "../types/interfaceProduct";
+import { TableRowProducts} from "../types/interfaceProduct";
 
-const StyledTd = styled.td`
+const Td = styled.td`
   padding: 10px;
   border: 1px solid #ddd;
   text-align: left;
 `;
 
 // Estilos para las imágenes en la tabla
-const StyledImg = styled.img`
+const Img = styled.img`
   width: 50px;
   height: 50px;
   object-fit: cover;
@@ -17,7 +17,7 @@ const StyledImg = styled.img`
 `;
 
 // Estilos para los botones de acción (Editar y Eliminar)
-const ActionButton = styled.button`
+const Button = styled.button`
   background-color: #4caf50; 
   color: white;
   border: none;
@@ -39,21 +39,30 @@ const ActionButton = styled.button`
   }
 `;
 
+const Tr = styled.tr`
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  &:hover {
+    background-color: #ddd;
+  }
+`;
+
 const TableRow: React.FC<TableRowProducts> = ({ product}) => {
     let { title, description, price, image} = product;
 
     return (
-        <tr>
-            <td>{title}</td>
-            <td>{description}</td>
-            <td>{price}</td>
-            <td><img src={image} alt={title}/></td>
+        <Tr>
+            <Td>{title}</Td>
+            <Td>{description}</Td>
+            <Td>{price}</Td>
+            <Td><Img src={image} alt={title}/></Td>
 
-            <td>
-                <button >Editar</button>
-                <button >Eliminar</button>
-            </td>
-        </tr>
+            <Td>
+                <Button>Editar</Button>
+                <Button>Eliminar</Button>
+            </Td>
+        </Tr>
     );
 };
 
