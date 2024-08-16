@@ -2,7 +2,8 @@
 import styled from "styled-components"
 //Importo el componente que va a renderizar las filas de table row
 import TableRow from "./TableRow";
-import { TableData } from "../types/interfaceProduct";
+import { TableData } from "../types/interfaceTable";
+import TableHeader from "./TableHead"
 //Se importa la interfaz para definir los tipos de props que recibe el componente table
 
 
@@ -21,13 +22,13 @@ const Title = styled.h3`
 `;
 
 
-const StyledTable = styled.table`
+const TableStyle = styled.table`
   width: 100%;
   border-collapse: collapse;
 `;
 
 
-const StyledTh = styled.th`
+const Th = styled.th`
   background-color: #4caf50;
   color: white;
   padding: 10px;
@@ -35,13 +36,13 @@ const StyledTh = styled.th`
   border: 1px solid #ddd;
 `;
 
-const StyledTd = styled.td`
+const Td = styled.td`
   padding: 10px;
   border: 1px solid #ddd;
   text-align: left;
 `;
 
-const StyledTr = styled.tr`
+const Tr = styled.tr`
   &:nth-child(even) {
     background-color: #f2f2f2;
   }
@@ -53,17 +54,10 @@ const StyledTr = styled.tr`
 
 const Table: React.FC<TableData> = ({ data}) => {//Define el componente `table` como un componente funcional de React con el tipo `TableData`
     return (
-        <TableContainer>
+        <div>
             <Title>Tabla de produtos</Title>
-            <StyledTable>
-                  <StyledTr>
-                      <StyledTh>Nombre</StyledTh>
-                      <StyledTh>Descripción</StyledTh>
-                      <StyledTh>Precio</StyledTh>
-                      <StyledTh>Imagen</StyledTh>
-                      <StyledTh>Acciones</StyledTh>
-                  </StyledTr>
-
+            <TableStyle>
+              <TableHeader/>
                 <tbody>
                     {data.length > 0 ? (//Se realiza un condicional para verificar si hay datos en el array de data.
                         data.map((product) => (//Si hay datos recorre el array y va a renderizar los datos de cada fila.
@@ -74,12 +68,12 @@ const Table: React.FC<TableData> = ({ data}) => {//Define el componente `table` 
                         ))
                     ) : (
                         <tr>
-                            <StyledTd colSpan={5}>Sin datos</StyledTd>
+                            <td colSpan={5}>Sin datos</td>
                         </tr>
                     )}
                 </tbody>
-            </StyledTable>
-        </TableContainer>
+            </TableStyle>
+        </div>
     )
 };
 

@@ -1,4 +1,3 @@
-
 import { IProduct } from "../types/interfaceProduct";
 import {getProducts} from "./GetProducts";
 

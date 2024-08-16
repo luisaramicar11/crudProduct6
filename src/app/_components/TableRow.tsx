@@ -1,6 +1,6 @@
 "use client"
 import styled from "styled-components";
-import { TableRowProducts} from "../types/interfaceProduct";
+import { TableRowProducts} from "../types/interfaceTable";
 
 const Td = styled.td`
   padding: 10px;

@@ -12,13 +12,13 @@ max-width:300px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 display: flex;
 flex-direction:column;
-aling-item: center;
+align-items: center;
 `;
 
 const Product_image = styled.img`
 width:100%;
-heigth:auto;
-boder-radius:10px;
+height:auto;
+border-radius:10px;
 `;
 
 const Product_title = styled.p`
@@ -30,7 +30,7 @@ margin: 10px 0;
 const Product_description= styled.p`
 font-size: 1.5rem;
 color: #666;
-text-aling: center;
+text-align: center;
 margin: 10px 0;
 `;
 const Product_price = styled.p`
@@ -42,7 +42,6 @@ margin: 10px 0;
 
 interface CardProps{
 product:IProduct;
-
 }
 
 const card: React.FC<CardProps> = ({product}) => {
@@ -50,7 +49,6 @@ return(
     <Card_container>
         <Product_image src={product.image} alt={product.title}/>
         <Product_title>{product.title}</Product_title>
-    
     </Card_container>
     );
 };  

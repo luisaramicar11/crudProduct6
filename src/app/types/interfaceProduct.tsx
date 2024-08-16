@@ -17,10 +17,3 @@ export interface IProductError { // interface que gestiona errores en la creaciÃ
     onAddProduct: (product: IProduct) => void;
   }
 
-  export interface TableData {
-    data : IProduct[]
-  }
-
-  export interface TableRowProducts {
-    product : IProduct
-  }

@@ -1,18 +1,17 @@
 'use client';
+import styled from "styled-components"
 import {useState} from "react"
 import { setProduct } from "./SetProducts";
 import Loader from "./Loader";
-import styled from "styled-components";
-import { CreateFormProps, IProduct, IProductError } from "../types/interfaceProduct";
+import { IProduct } from "../types/interfaceProduct";
+import { CreateFormProps, IProductError } from "../types/interfaceProduct";
 import Message from "./Message";
 
-
 const Div = styled.div`
-    margin: 15px;
+  margin: 15px;
     display: flex;
     justify-content: center;
   `
-
 const Form = styled.form`
     padding: 15px;
     border-radius: 20px;
@@ -20,23 +19,24 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     gap: 5px;
-    box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.2);;
+    box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.2);
   `
+
 
 const Title = styled.h2`
   text-align: center;
   margin-bottom: 20px;
   color: black;
   font-weight: bold;
-  font-size: 15pt`
- 
+  font-size: 15pt;
+  `
 
 const Inputs = styled.input`
     border-radius: 10px;
     border: 0.9px black solid;
     padding: 5px;
     font-size: small;
-    color: black
+    color: black;
     `
 
 const DivButton = styled.div`
@@ -57,8 +57,15 @@ const Button = styled.button`
     color: black;
 `
 
+const P = styled.p`
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: "bold";
+    `
+
 const initialForm: IProduct = {
-    id: 0,    
+    id: Date.now(),    
     title: "",
     description: "",
     price: 0,
@@ -70,7 +77,7 @@ const initialForm: IProduct = {
     const [errors, setErrors] = useState<IProductError>({} as IProductError);
     const [loading, setLoading] = useState(false);  
     const [success, setSuccess] = useState(false);
-    const [productCounter, setProductCounter] = useState(1);
+
 
   const validationsForm = (form: IProduct): IProductError=> {
     let errors: IProductError  = {} as IProductError;
@@ -96,11 +103,6 @@ const initialForm: IProduct = {
     return errors;
   };
 
-  let styles = {
-    fontWeight: "bold",
-    color: "#de3545",
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -122,7 +124,7 @@ const initialForm: IProduct = {
       setLoading(false);
       setSuccess(true);  // Mostrar mensaje de éxito
       setForm(initialForm);  // Reiniciar formulario
-      setProductCounter(productCounter + 1);
+  
 
             // Ocultar el mensaje de éxito después de unos segundos
       setTimeout(() => setSuccess(false), 3000);
@@ -135,7 +137,7 @@ const initialForm: IProduct = {
   return (
     <main>
 
-        <Title>Create Form</Title>
+        <Title>Crear producto</Title>
     <Div>
       <Form onSubmit={handleSubmit}>
         <Inputs
@@ -147,7 +149,7 @@ const initialForm: IProduct = {
           value={form.title}
           required
         />
-        {errors.title && <p style={styles}>{errors.title}</p>}
+        {errors.title && <P>{errors.title}</P>}
         <Inputs
           type="text"
           name="description"
@@ -157,7 +159,7 @@ const initialForm: IProduct = {
           value={form.description}
           required
         />
-        {errors.description && <p style={styles}>{errors.description}</p>}
+        {errors.description && <P>{errors.description}</P>}
         <Inputs
           type="number"
           name="price"
@@ -167,7 +169,7 @@ const initialForm: IProduct = {
           value={form.price}
           required
         />
-        {errors.price && <p style={styles}>{errors.price}</p>}
+        {errors.price && <P>{errors.price}</P>}
         <Inputs
           type="text"
           name="image"
@@ -177,7 +179,7 @@ const initialForm: IProduct = {
           value={form.image}
           required
         />
-        {errors.image && <p style={styles}>{errors.image}</p>}
+        {errors.image && <P>{errors.image}</P>}
         <DivButton>
             <Button type="submit">Enviar</Button>
         </DivButton>
