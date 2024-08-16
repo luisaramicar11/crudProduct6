@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use client";
 import styled from "styled-components";
 const FooterContainer = styled.footer`
 background-color: #333;
@@ -26,7 +26,7 @@ text-decoration: none;
     text-decoration: underline;
   }
 `;
-const footer =()=>{
+const Footer =()=>{
     return(
         <FooterContainer>
         <FooterLinks>
@@ -40,3 +40,5 @@ const footer =()=>{
     </FooterContainer>
     )
 }
+
+export default Footer
