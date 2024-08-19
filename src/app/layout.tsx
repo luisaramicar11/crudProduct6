@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ClientLayout from './ClientLayout';
@@ -22,6 +24,7 @@ export default function RootLayout({
         <ClientLayout>
           {children}
         </ClientLayout>
+        <ToastContainer />
       </body>
     </html>
   );

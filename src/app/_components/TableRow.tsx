@@ -48,8 +48,8 @@ const Tr = styled.tr`
   }
 `;
 
-const TableRow: React.FC<TableRowProducts> = ({ product}) => {
-    let { title, description, price, image} = product;
+const TableRow: React.FC<TableRowProducts> = ({ product, setDataToEdit, deleteData }) => {
+    let { id, title, description, price, image} = product;
 
     return (
         <Tr>
@@ -59,8 +59,8 @@ const TableRow: React.FC<TableRowProducts> = ({ product}) => {
             <Td><Img src={image} alt={title}/></Td>
 
             <Td>
-                <Button>Editar</Button>
-                <Button>Eliminar</Button>
+                <Button onClick={() => setDataToEdit(product)}>Editar</Button>
+                <Button onClick={() => deleteData(id)}>Eliminar</Button>
             </Td>
         </Tr>
     );

@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import { IProduct } from "../types/interfaceProduct";
+import { CardProps } from "../types/interfaceProduct";
 
-
-const Card_container = styled.div`
+const CardContainer = styled.div`
 border: 1px solid #e0e0e0;
 border-radius: 10px;
 padding: 16px;
@@ -15,41 +14,24 @@ flex-direction:column;
 align-items: center;
 `;
 
-const Product_image = styled.img`
+const ProductImage = styled.img`
 width:100%;
 height:auto;
 border-radius:10px;
 `;
 
-const Product_title = styled.p`
+const ProductTitle = styled.p`
 font-size: 1.5rem;
 color: #333;
 margin: 10px 0;
 `;
 
-const Product_description= styled.p`
-font-size: 1.5rem;
-color: #666;
-text-align: center;
-margin: 10px 0;
-`;
-const Product_price = styled.p`
-font-size: 1.2rem;
-color:#000;
-font-weight:bold;
-margin: 10px 0;
-`;
-
-interface CardProps{
-product:IProduct;
-}
-
 const card: React.FC<CardProps> = ({product}) => {
 return(
-    <Card_container>
-        <Product_image src={product.image} alt={product.title}/>
-        <Product_title>{product.title}</Product_title>
-    </Card_container>
+    <CardContainer>
+        <ProductImage src={product.image} alt={product.title}/>
+        <ProductTitle>{product.title}</ProductTitle>
+    </CardContainer>
     );
 };  
 export default card;
