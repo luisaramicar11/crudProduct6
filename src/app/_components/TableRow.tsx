@@ -3,64 +3,69 @@ import styled from "styled-components";
 import { TableRowProducts} from "../types/interfaceTable";
 
 const Td = styled.td`
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
 `;
 
 // Estilos para las imágenes en la tabla
 const Img = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 50%;
+  height: 75px;
   object-fit: cover;
-  border-radius: 5px;
 `;
 
-// Estilos para los botones de acción (Editar y Eliminar)
-const Button = styled.button`
-  background-color: #4caf50; 
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  margin-right: 5px;
-  border-radius: 3px;
+const EditButton = styled.button`
   cursor: pointer;
+  background-color: transparent;
+  border: 1px solid orange;
+  margin: 5px;
+  color: orange;
+  border-radius: 10px;
+  padding: 5px 10px;
 
   &:hover {
-    background-color: #45a049;
-  }
+    background-color: orange;
+    color: white;
+}
+`
 
-  &:nth-child(2) {
-    background-color: #f44336; 
-  }
+const DeleteButton = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid red;
+  margin: 5px;
+  color: red;
+  border-radius: 10px;
+  padding: 5px 10px;
 
-  &:nth-child(2):hover {
-    background-color: #e53935;
-  }
-`;
+  &:hover {
+    background-color: red;
+    color: white;
+}
+`
 
 const Tr = styled.tr`
+  text-align: center;
+
   &:nth-child(even) {
     background-color: #f2f2f2;
   }
-  &:hover {
-    background-color: #ddd;
-  }
 `;
 
-const TableRow: React.FC<TableRowProducts> = ({ product}) => {
-    let { title, description, price, image} = product;
+const TableRow: React.FC<TableRowProducts> = ({ product, setDataToEdit, deleteData }) => {
+    let { id, title, description, price, image} = product;
 
     return (
         <Tr>
             <Td>{title}</Td>
             <Td>{description}</Td>
-            <Td>{price}</Td>
+            <Td>${price}</Td>
             <Td><Img src={image} alt={title}/></Td>
 
             <Td>
-                <Button>Editar</Button>
-                <Button>Eliminar</Button>
+                <EditButton onClick={() => setDataToEdit(product)}>Editar</EditButton>
+                <DeleteButton onClick={() => deleteData(id)}>Eliminar</DeleteButton>
             </Td>
         </Tr>
     );

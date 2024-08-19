@@ -1,55 +1,57 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import { IProduct } from "../types/interfaceProduct";
+import { CardProps } from "../types/interfaceProduct";
 
-
-const Card_container = styled.div`
-border: 1px solid #e0e0e0;
-border-radius: 10px;
-padding: 16px;
-max-width:300px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-display: flex;
-flex-direction:column;
-align-items: center;
+const CardContainer = styled.div`
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    width: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction:column;
+    margin: 5px;
 `;
 
-const Product_image = styled.img`
-width:100%;
-height:auto;
-border-radius:10px;
+const ProductImage = styled.img`
+    width:100%;
+    height:250px;
+    border-radius:15px;
+    text-align: center;
+    object-fit: cover;
 `;
 
-const Product_title = styled.p`
-font-size: 1.5rem;
-color: #333;
-margin: 10px 0;
+const ProductTitle = styled.p`
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
 `;
 
-const Product_description= styled.p`
-font-size: 1.5rem;
-color: #666;
-text-align: center;
-margin: 10px 0;
-`;
-const Product_price = styled.p`
-font-size: 1.2rem;
-color:#000;
-font-weight:bold;
-margin: 10px 0;
+const ProductDescription = styled.p`
+    font-size: 17px;
+    color: black;
 `;
 
-interface CardProps{
-product:IProduct;
-}
+const ProductPrice = styled.p`
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: black;
+    text-align: right;
+    font-weight: bolder;
+`;
 
 const card: React.FC<CardProps> = ({product}) => {
 return(
-    <Card_container>
-        <Product_image src={product.image} alt={product.title}/>
-        <Product_title>{product.title}</Product_title>
-    </Card_container>
+    <CardContainer>
+        <ProductImage src={product.image} alt={product.title}/>
+        <ProductTitle>{product.title}</ProductTitle>
+        <ProductDescription>{product.description}</ProductDescription>
+        <ProductPrice>${product.price}</ProductPrice>
+    </CardContainer>
     );
 };  
 export default card;

@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tienda CRUD con Next.js y TypeScript
 
-## Getting Started
+Este es un proyecto de una tienda en línea que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Borrar) de productos. Está desarrollado con Next.js y TypeScript.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Página de Inicio**: Contiene información general sobre la tienda.
+- **Página de Productos**: Muestra una lista de todos los productos creados.
+- **Página de Formulario**: Contiene un formulario para agregar nuevos productos y una tabla que muestra los productos creados. Cada fila de la tabla tiene botones para editar o borrar el producto.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: Framework de React para el desarrollo de aplicaciones web con renderizado del lado del servidor.
+- **TypeScript**: Lenguaje de programación que añade tipado estático a JavaScript.
+- **Styled-components**: Biblioteca para escribir estilos en componentes de React.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Instalación
 
-## Learn More
+Sigue estos pasos para clonar e instalar el proyecto:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clona el repositorio:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/luisaramicar11/crudProduct6
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Ve al directorio del proyecto:
 
-## Deploy on Vercel
+    ```bash
+    cd tienda-crud
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Instala las dependencias:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    npm install
+    ```
+
+## Scripts Disponibles
+
+En el directorio del proyecto, puedes ejecutar:
+
+- **`npm run dev`**: Ejecuta la aplicación en modo desarrollo. Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en el navegador.
+- **`npm run build`**: Construye la aplicación para producción.
+- **`npm run start`**: Inicia el servidor de producción.
+- **`npm run lint`**: Analiza el código en busca de errores de estilo.
+
+## Estructura del Proyecto
+
+- **`/products`**: Contiene la página donde se muestran todos los productos en tarjetas.
+- **`/create`**: Contiene la página del formulario y la tabla.
+- **`/components`**: Componentes reutilizables como el formulario, la tabla, y las tarjetas de productos.
+- **`/types`**: Contiene interfaces y tipos.
+
+## Funcionalidades
+
+### Página de Inicio
+
+La página de inicio proporciona una visión general de la tienda.
+
+### Página de Productos
+
+En esta página, se muestra una lista de todos los productos creados. Los productos se muestran en formato de tarjetas para una mejor visualización.
+
+### Página de Formulario
+
+Aquí puedes agregar nuevos productos utilizando un formulario. Los productos creados se muestran en una tabla, donde cada fila tiene opciones para editar o borrar el producto.
+
+
+

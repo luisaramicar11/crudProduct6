@@ -7,9 +7,13 @@ export interface IProduct { // interface para la creación del nuevo producto.
 }
 
 export interface TableData {
-    data : IProduct[]
+    data : IProduct[],
+    setDataToEdit: (product: IProduct | null) => void;
+    deleteData: (id: number) => void;
 }
 
   export interface TableRowProducts {
-    product : IProduct
+    product : IProduct,
+    setDataToEdit: (product: IProduct | null) => void;
+    deleteData: (id: number) => void;
 }

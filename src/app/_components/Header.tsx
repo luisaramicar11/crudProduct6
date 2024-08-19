@@ -1,72 +1,49 @@
 "use client";
 import styled from 'styled-components';
 
-
 const Header = styled.header`
-  text-align: center;
-  background-color: #a0d6f390; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 100px;
-  width: 100%;
-`;
+  background-color: #ffff;
+  box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.1);
+`
 const Nav = styled.nav`
-  align-items: center;
-
-`;
-const Logo = styled.h2`
-  font-size: 24px;
-  color: #333; 
-  font-weight: bold;
-`;
-const Li = styled.li`
-  color: #333;
-   font-size: 18px;
-   border-radius:20px;
-   border: solid 1px #ffffff;
-   padding: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   background-color: #afc9dd7e;
-   list-style: none;
-   :hover{
-    color:beige;
-   }
-`
-const Enlace= styled.a`
-  text-decoration: none;
-  color: #333;
-   font-size: 18px;
-   border-radius:20px;
-   border: solid 1px #ffffff;
-   padding: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   background-color: #afc9dd7e;
-   list-style: none;
-   :hover{
-    color:beige;
-   }
-`
-
-const Ul = styled.ul`
+  width: 100%;
+  height: 70px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
-  padding: 30px;
 `
+const H1 = styled.h1`
+  color: black;
+  font-size: 30px;
+`
+const Links = styled.div`
+  display: flex;
+  gap: 60px;
+`
+
+const A = styled.a`
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  
+  &:hover {
+    border-bottom: 1px solid lightgray;
+  }
+`
+
 const HeaderComponent: React.FC = () => (
   <Header>
         <Nav>
-          
-          <Ul>
-            <Logo> TechNova Store</Logo>
-            <Li><Enlace href="/">Home</Enlace></Li>
-           
-            <Li><Enlace href="/products">Productos</Enlace></Li>
-          
-            <Li><Enlace href="/create">Crear producto</Enlace></Li>
-           
-          </Ul>
+            <div>
+                <H1>TechNova Store</H1>
+            </div>
+            <Links>
+                <A href="/">Inicio</A>
+                <A href="/products">Productos</A>
+                <A href="/create">Formulario</A>
+            </Links>
         </Nav>
-      </Header>
+    </Header>
 );
 
 export default HeaderComponent;
