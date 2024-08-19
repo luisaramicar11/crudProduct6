@@ -19,6 +19,7 @@ export const GlobalTheme = {
 
 // Global styling for essential HTML elements
 export const GlobalStyle = createGlobalStyle`
+
 html{
     width: 100% !important;
     margin: 0;

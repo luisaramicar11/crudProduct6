@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Th = styled.th`
-  background-color: #4caf50;
+  background-color: black;
   color: white;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #ddd;
 `;
 

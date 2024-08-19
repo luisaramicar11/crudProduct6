@@ -21,6 +21,6 @@ export interface CreateFormProps {
 }
 
 export interface CardProps{
-  product:IProduct;
+  product: IProduct;
   }
 

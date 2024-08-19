@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "./GetProducts";
 import CreateForm from "./CreateForm";
-import Table from "./table";
+import Table from "./Table";
 import { IProduct } from "../types/interfaceProduct";
 import { createData as createDataService } from "./CreateData";
 import { deleteData as deleteDataService } from "./DeleteData";
-import { updateData as updateDataService } from "./updateData";
+import { updateData as updateDataService } from "./UpdateData";
 import { toast } from "react-toastify";
 
 const ProductManager = () => {
@@ -56,7 +56,7 @@ const ProductManager = () => {
         dataToEdit={dataToEdit}
         setDataToEdit={setDataToEdit} 
       />
-      <Table 
+      <Table
         data={products} 
         setDataToEdit={setDataToEdit} 
         deleteData={deleteData}
