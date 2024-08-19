@@ -38,9 +38,9 @@ const HeaderComponent: React.FC = () => (
                 <H1>TechNova Store</H1>
             </div>
             <Links>
-                <A href="/">Home</A>
-                <A href="/products">Products</A>
-                <A href="/create">Create</A>
+                <A href="/">Inicio</A>
+                <A href="/products">Productos</A>
+                <A href="/create">Formulario</A>
             </Links>
         </Nav>
     </Header>

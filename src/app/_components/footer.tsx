@@ -34,11 +34,11 @@ const Footer =()=>{
     return(
       <FooterContainer>
         <FooterLinks>
-            <A href="">About Us</A>
-            <A href="">Contact Us</A>
-            <A href="">Privacy Policy</A>
+            <A href="">Sobre nosotros</A>
+            <A href="">Contáctanos</A>
+            <A href="">Política de privacidad</A>
         </FooterLinks>
-        <P>©️ 2024 TechNova Store. All rights reserved.</P>
+        <P>©️ 2024 TechNova Store. Todos los derechos reservados.</P>
     </FooterContainer>
     )
 }
