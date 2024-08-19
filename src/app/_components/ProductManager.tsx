@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "./GetProducts";
 import CreateForm from "./CreateForm";
-import Table from "./Table";
+import Table from "./table";
 import { IProduct } from "../types/interfaceProduct";
 import { createData as createDataService } from "./CreateData";
 import { deleteData as deleteDataService } from "./DeleteData";

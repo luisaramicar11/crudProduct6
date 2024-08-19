@@ -41,7 +41,7 @@ const Tr = styled.tr`
 const Table: React.FC<TableData> = ({ data, setDataToEdit, deleteData}) => {//Define el componente `table` como un componente funcional de React con el tipo `TableData`
     return (
         <TableContainer>
-            <Title>Tabla de produtos</Title>
+            <Title>Tabla de productos</Title>
             <TableStyle>
               <TableHeader/>
                 <tbody>
