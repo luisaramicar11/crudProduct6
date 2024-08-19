@@ -13,7 +13,14 @@ export interface IProductError { // interface que gestiona errores en la creaciÃ
     image: string;
 }
 
-  export interface CreateFormProps { // interface para la funciÃ³n que crea un nuevo producto.
-    onAddProduct: (product: IProduct) => void;
+export interface CreateFormProps { 
+  createData: (product: IProduct) => void;
+  updateData: (product: IProduct) => void;
+  dataToEdit: IProduct | null;
+  setDataToEdit: (data:IProduct | null) => void;
+}
+
+export interface CardProps{
+  product:IProduct;
   }
 

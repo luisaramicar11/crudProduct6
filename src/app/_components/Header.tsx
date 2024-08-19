@@ -1,7 +1,6 @@
 "use client";
 import styled from 'styled-components';
 
-
 const Header = styled.header`
   text-align: center;
   background-color: #a0d6f390; 
