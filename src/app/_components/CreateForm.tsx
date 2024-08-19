@@ -23,6 +23,7 @@ const Form = styled.form`
 `;
 
 const Title = styled.h2`
+  margin-top: 15px;
   text-align: center;
   margin-bottom: 20px;
   color: black;
@@ -32,8 +33,8 @@ const Title = styled.h2`
 
 const Inputs = styled.input`
   border-radius: 10px;
-  border: 0.9px black solid;
-  padding: 5px;
+  border: 1px #ccc solid;
+  padding: 7px;
   font-size: small;
   color: black;
 `;
@@ -44,22 +45,27 @@ const DivButton = styled.div`
 `;
 
 const Button = styled.button`
-  width: 10%;
   margin-top: 5px;
+  margin-right: 10px;
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  border: 1px black solid;
+  border: 1px green solid;
+  color: green;
   cursor: pointer;
   background: none;
-  padding: 3px;
-  color: black;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
 `;
 
 const P = styled.p`
   color: red;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-weight: bold;
 `;
 

@@ -2,42 +2,43 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-background-color: #333;
-color: white;
-padding: 20px;
-text-align: center;
-margin-top: auto;
-`;
-
-const FooterText = styled.p`
-margin: 0;
-font-size: 14px;
-`;
+  margin-top: 25px;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  background-color: #ffff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+`
 
 const FooterLinks = styled.div`
-margin: 10px 0;
-`;
-
-const FooterLink = styled.a`
-color: white;
-margin: 0 10px;
-text-decoration: none;
+  height: 20px;
+  padding: 5px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+`
+const A = styled.a`
+  text-decoration: none;
+  color: black;
 
   &:hover {
-    text-decoration: underline;
-  }
-`;
+    border-bottom: 1px solid lightgray;
+}
+`
+
+const P = styled.p`
+  font-size: small;
+`
+
 const Footer =()=>{
     return(
-        <FooterContainer>
+      <FooterContainer>
         <FooterLinks>
-        <FooterLink href="/about">About Us</FooterLink>
-        <FooterLink href="/contact">Contact</FooterLink>
-        <FooterLink href="/privacy">Privacy Policy</FooterLink>
+            <A href="">About Us</A>
+            <A href="">Contact Us</A>
+            <A href="">Privacy Policy</A>
         </FooterLinks>
-        <FooterText>
-        © 2024 TechNova store. All rights reserved.
-        </FooterText>
+        <P>©️ 2024 TechNova Store. All rights reserved.</P>
     </FooterContainer>
     )
 }

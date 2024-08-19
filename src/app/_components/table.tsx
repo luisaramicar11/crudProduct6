@@ -7,7 +7,7 @@ import TableHeader from "./TableHead"
 const TableContainer = styled.div`
   padding: 20px;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: white;
 `;
 
 const Title = styled.h3`
@@ -18,6 +18,7 @@ const Title = styled.h3`
 `;
 
 const TableStyle = styled.table`
+  box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.2);
   width: 100%;
   border-collapse: collapse;
 `;

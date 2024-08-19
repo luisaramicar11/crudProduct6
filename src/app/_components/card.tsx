@@ -4,26 +4,44 @@ import styled from "styled-components";
 import { CardProps } from "../types/interfaceProduct";
 
 const CardContainer = styled.div`
-border: 1px solid #e0e0e0;
-border-radius: 10px;
-padding: 16px;
-max-width:300px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-display: flex;
-flex-direction:column;
-align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    width: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction:column;
+    margin: 5px;
 `;
 
 const ProductImage = styled.img`
-width:100%;
-height:auto;
-border-radius:10px;
+    width:100%;
+    height:250px;
+    border-radius:15px;
+    text-align: center;
+    object-fit: cover;
 `;
 
 const ProductTitle = styled.p`
-font-size: 1.5rem;
-color: #333;
-margin: 10px 0;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+`;
+
+const ProductDescription = styled.p`
+    font-size: 17px;
+    color: black;
+`;
+
+const ProductPrice = styled.p`
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: black;
+    text-align: right;
+    font-weight: bolder;
 `;
 
 const card: React.FC<CardProps> = ({product}) => {
@@ -31,6 +49,8 @@ return(
     <CardContainer>
         <ProductImage src={product.image} alt={product.title}/>
         <ProductTitle>{product.title}</ProductTitle>
+        <ProductDescription>{product.description}</ProductDescription>
+        <ProductPrice>${product.price}</ProductPrice>
     </CardContainer>
     );
 };  

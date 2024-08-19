@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, GlobalTheme } from "./GlobalStyling";
 import HeaderComponent from "./_components/Header";
-import Footer  from "./_components/footer";
+import Footer  from "./_components/Footer";
 
 
 const ClientLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {

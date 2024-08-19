@@ -1,16 +1,23 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
-import Card from "../_components/card";
+import Card from "../_components/Card";
 import { getProducts } from "../_components/GetProducts";  
 import { IProduct } from "../types/interfaceProduct";
 import styled from "styled-components";
 
 const Div = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 15px;
+  margin: 40px;
 `;
+
+const H2 = styled.h2`
+  margin-top: 25px;
+  text-align: center;
+  color: black;
+`
 
 const ProductsPage: React.FC = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -22,7 +29,7 @@ const ProductsPage: React.FC = () => {
 
   return (
     <div>
-      <h1>Productos</h1>
+      <H2>Products</H2>
       <Div>
         {products.length > 0 ? (
           products.map((product) => (
