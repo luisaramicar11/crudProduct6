@@ -10,10 +10,12 @@ const P= styled.p`
     color: black;
     font-size: 20px;
     text-align: center;
+    padding: 50px;
 `
-const Div = styled.div`
+const Div = styled.div` 
     padding: 10px;
-    margin-top: 10px;
+    margin: 70px;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     box-shadow: 1px 2px 4px 3px rgba(0, 0, 0, 0.2);

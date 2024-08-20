@@ -5,6 +5,9 @@ import styled from "styled-components";
 import Loader from "./Loader";
 import { IProduct } from "../types/interfaceProduct";
 import { CreateFormProps, IProductError } from "../types/interfaceProduct";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 const Div = styled.div`
   margin: 15px;
@@ -37,6 +40,7 @@ const Inputs = styled.input`
   padding: 7px;
   font-size: small;
   color: black;
+  font-family: ${quicksand};
 `;
 
 const DivButton = styled.div`
@@ -152,6 +156,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ createData, updateData, dataToE
       <Div>
         <Form onSubmit={handleSubmit}>
           <Inputs
+            className={quicksand.className}
             type="text"
             name="title"
             placeholder="Escribe el nombre del producto"
@@ -162,6 +167,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ createData, updateData, dataToE
           />
           {errors.title && <P>{errors.title}</P>}
           <Inputs
+            className={quicksand.className}
             type="text"
             name="description"
             placeholder="Escribe la descripción del producto"
@@ -172,6 +178,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ createData, updateData, dataToE
           />
           {errors.description && <P>{errors.description}</P>}
           <Inputs
+            className={quicksand.className}
             type="number"
             name="price"
             placeholder="Escribe el precio del producto"
@@ -182,6 +189,7 @@ const CreateForm: React.FC<CreateFormProps> = ({ createData, updateData, dataToE
           />
           {errors.price && <P>{errors.price}</P>}
           <Inputs
+            className={quicksand.className}
             type="text"
             name="image"
             placeholder="Carga la URL del producto"
@@ -192,8 +200,8 @@ const CreateForm: React.FC<CreateFormProps> = ({ createData, updateData, dataToE
           />
           {errors.image && <P>{errors.image}</P>}
           <DivButton>
-            <Button type="submit">Enviar</Button>
-            <Button type="reset" value="Limpiar" onClick={handleReset}>Limpiar</Button>
+            <Button className={quicksand.className} type="submit">Enviar</Button>
+            <Button  className={quicksand.className} type="reset" value="Limpiar" onClick={handleReset}>Limpiar</Button>
           </DivButton>
         </Form>
         {loading && <Loader />}

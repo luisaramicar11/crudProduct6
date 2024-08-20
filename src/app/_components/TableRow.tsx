@@ -1,6 +1,9 @@
 "use client"
 import styled from "styled-components";
 import { TableRowProducts} from "../types/interfaceTable";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 const Td = styled.td`
   padding: 5px;
@@ -64,8 +67,8 @@ const TableRow: React.FC<TableRowProducts> = ({ product, setDataToEdit, deleteDa
             <Td><Img src={image} alt={title}/></Td>
 
             <Td>
-                <EditButton onClick={() => setDataToEdit(product)}>Editar</EditButton>
-                <DeleteButton onClick={() => deleteData(id)}>Eliminar</DeleteButton>
+                <EditButton className={quicksand.className} onClick={() => setDataToEdit(product)}>Editar</EditButton>
+                <DeleteButton className={quicksand.className} onClick={() => deleteData(id)}>Eliminar</DeleteButton>
             </Td>
         </Tr>
     );

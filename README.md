@@ -66,5 +66,9 @@ En esta página, se muestra una lista de todos los productos creados. Los produc
 
 Aquí puedes agregar nuevos productos utilizando un formulario. Los productos creados se muestran en una tabla, donde cada fila tiene opciones para editar o borrar el producto.
 
+## Video
 
+ ```bash
+    https://www.loom.com/share/2a301603613a4a8bb3661e0005932bc8?sid=1cdb2579-35e6-4ea1-9445-d8b49016974c
+    ```
 
